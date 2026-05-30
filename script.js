@@ -60,7 +60,7 @@ function calcular() {
         resDiv.innerHTML = `
             <p><strong>IP Informado:</strong> ${ipInput}</p>
             <p><strong>Máscara:</strong> ${longParaIp(mascaraLong)}</p>
-            <p><strong>Prefixo:</strong> /${cidr}</p>
+            <p><strong>Prefixo CIDR:</strong> /${cidr}</p>
             <p><strong>Rede:</strong> ${longParaIp(redeLong)}</p>
             <p><strong>Broadcast:</strong> ${longParaIp(broadcastLong)}</p>
             <p><strong>Primeiro Host:</strong> ${primeiroHost}</p>
