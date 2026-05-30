@@ -7,6 +7,15 @@ function longParaIp(long) {
 }
 
 function mascaraParaCidr(mascaraStr) {
+    const octetos = mascaraStr.split('.');
+
+    for (let i = 0; i < octetos.length; i++) {
+        const valor = parseInt(octetos[i], 10);
+        if (isNaN(valor) || valor < 0 || valor > 255) {
+            throw new Error("Máscara inválida. Os octetos devem ser entre 0 e 255.");
+        }
+    }
+
     const binario = ipParaLong(mascaraStr).toString(2).replace(/0/g, '');
     return binario.length;
 }
@@ -25,7 +34,14 @@ function calcular() {
     const resDiv = document.getElementById('resultado');
 
     try {
+
         if (!/^(\d{1,3}\.){3}\d{1,3}$/.test(ipInput)) throw new Error("IP inválido.");
+        const ipOctetos = ipInput.split('.');
+        for (let o of ipOctetos) {
+            if (parseInt(o, 10) > 255) throw new Error("IP inválido. Os octetos devem ser entre 0 e 255.");
+        }
+
+        if (maskInput === "" || maskInput === "/") throw new Error("Máscara ou CIDR inválido.");
 
         let cidr;
         if (maskInput.startsWith('/')) {
