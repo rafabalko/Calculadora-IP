@@ -90,4 +90,11 @@ function calcular() {
         resDiv.className = "resultado erro";
         resDiv.innerHTML = `⚠️ Erro: ${error.message}`;
     }
+    function limpar() {
+        document.getElementById('ip').value = "";
+        document.getElementById('mascara').value = "";
+        const resDiv = document.getElementById('resultado');
+        resDiv.innerHTML = "";
+        resDiv.style.display = "none";
+    }
 }
