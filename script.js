@@ -65,7 +65,7 @@ function calcular() {
             <p><strong>Broadcast:</strong> ${longParaIp(broadcastLong)}</p>
             <p><strong>Primeiro Host:</strong> ${primeiroHost}</p>
             <p><strong>Último Host:</strong> ${ultimoHost}</p>
-            <p><strong>Total de Hosts:</strong> ${totalHosts}</p>
+            <p><strong>Total de Hosts:</strong> ${totalHosts.toLocaleString('pt-BR')}</p>
             <p><strong>Classe:</strong> ${obterClasse(ipInput)}</p>
         `;
 
