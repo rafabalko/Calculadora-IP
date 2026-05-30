@@ -1,0 +1,10 @@
+# Configurações de IDEs (VS Code, etc)
+.vscode/
+.idea/
+
+# Arquivos de sistema do Windows e Mac
+Thumbs.db
+.DS_Store
+
+# Logs de erro
+*.log
