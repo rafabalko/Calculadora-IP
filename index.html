@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Calculadora de Sub-rede</h2>
+
+    <div class="campo">
+        <label for="ip">Endereço IP:</label>
+        <input type="text" id="ip" placeholder="Ex: 192.168.1.0">
+    </div>
+
+    <div class="campo">
+        <label for="mascara">Máscara ou CIDR:</label>
+        <input type="text" id="mascara" placeholder="Ex: 255.255.255.0 ou /24">
+    </div>
+
+    <button onclick="calcular()">Calcular</button>
+
+    <div id="resultado" style="display: none;"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
