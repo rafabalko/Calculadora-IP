@@ -39,24 +39,29 @@ input {
     box-sizing: border-box;
 }
 
-button {
-    width: 100%;
-    padding: 12px;
-    background: #2b6cb0;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-weight: bold;
-    cursor: pointer;
+.botoes-container {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
 }
 
-button:hover {
-    background: #2c5282;
+.botoes-container button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+.btn-calcular {
+    background-color: #2b6cb0;
+    color: white;
 }
 .btn-limpar {
     background-color: #6c757d;
     color: white;
-    margin-left: 10px;
 }
 
 .btn-limpar:hover {
